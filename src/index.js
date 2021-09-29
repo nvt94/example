@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { App, App2 } from './App';
 import reportWebVitals from './reportWebVitals';
+
+let name = "react-js"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    { name != undefined ? <App name={name}/> : <></> }
   </React.StrictMode>,
   document.getElementById('root')
 );
